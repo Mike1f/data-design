@@ -8,7 +8,7 @@
 		<h1>Data Design</h1>
 		<div><h2>Persona</h2>
 			<p>John Smith is a 25 year old man who enjoys reading about computer security news articles on the internet one
-				site he enjoyes the most is <a href="https://nakedsecurity.sophos.com/">Naked Security</a>. he likes to read
+				site he enjoys the most is <a href="https://nakedsecurity.sophos.com/">Naked Security</a>. he likes to read
 				at home on his Dell laptop or on the go on his HTC mobile smart phone. When it comes to him using his
 				technology, He is very confident.</p>
 		</div>
@@ -35,23 +35,23 @@
 			<li>Category</li>
 			<ul>
 				<li>categoryId (primary key)</li>
-				<li>categoryName</li>
+				<li>categoryName (foreign key)</li>
 			</ul>
 			<li>Tag</li>
 			<ul>
-				<li>tagId</li>
-				<li>tagName</li>
+				<li>tagId (primary key)</li>
+				<li>tagName (foreign key)</li>
 			</ul>
 			<li>Article</li>
 			<ul>
-				<li>articleId</li>
-				<li>articleName</li>
-				<li>articleDateTime</li>
-				<li>articleContent</li>
+				<li>articleId (primary key)</li>
+				<li>articleName (foreign key)</li>
 				<li>articleAuthor</li>
+				<li>articleContent</li>
+				<li>articleDateTime</li>
 			</ul>
 			<h1>ERD</h1>
-			<img src="images/Untitled Diagram.png"
+			<img src="images/Untitled Diagram.png">
 		</ul>
 	</body>
 </html>
