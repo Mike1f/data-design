@@ -54,6 +54,6 @@
 			</ul>
 		</ul>
 		<h1>ERD</h1>
-		<img src="images/ERD Diagram.png">
+		<img src="images/erddiagram.png">
 	</body>
 </html>
