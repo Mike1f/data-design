@@ -15,7 +15,7 @@
 		<div>
 			<h2>User Story</h2>
 			<p>John wants to view different tags of computer security articles on Naked Security.</p>
-			<img src="./images/Capture.PNG">
+			<img src="./images/capture.PNG">
 		</div>
 		<h2>Use Case/Interaction Flow</h2>
 		<p>Precondition:</p>
@@ -52,8 +52,8 @@
 				<li>articleCategoryId</li>
 				<li>articleTagId</li>
 			</ul>
-			<h1>ERD</h1>
-			<img src="images/ERD Diagram.png">
 		</ul>
+		<h1>ERD</h1>
+		<img src="images/ERD Diagram.png">
 	</body>
 </html>
