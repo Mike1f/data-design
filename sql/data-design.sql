@@ -1,4 +1,4 @@
-ALTER DATABASE data_desgin_CHANGE_ME CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER DATABASE data_design_CHANGE_ME CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 DROP TABLE IF EXISTS category;
 DROP TABLE IF EXISTS tag;
@@ -24,7 +24,10 @@ articleAuthor BINARY (16) NOT NULL,
 articleContent VARCHAR (240) NOT NULL,
 articleCategoryId BINARY (16) NOT NULL,
 articleTagId BINARY (16) NOT NULL,
-FOREIGN KEY (articleCategoryId),
-FOREIGN KEY (articleTagId),
-PRIMARY KEY (articleId)
+INDEX(articleCategoryId),
+INDEX(articleTagId),
+FOREIGN KEY(articleCategoryId) REFERENCES (categoryId),
+FOREIGN KEY(articleTagId) REFERENCES (tagId),
+PRIMARY KEY(articleId)
 );
+
