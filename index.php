@@ -49,6 +49,8 @@
 				<li>articleAuthor</li>
 				<li>articleContent</li>
 				<li>articleDateTime</li>
+				<li>articleCategoryId</li>
+				<li>articleTagId</li>
 			</ul>
 			<h1>ERD</h1>
 			<img src="images/Untitled Diagram.png">
