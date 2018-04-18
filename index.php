@@ -53,7 +53,7 @@
 				<li>articleTagId</li>
 			</ul>
 			<h1>ERD</h1>
-			<img src="images/Untitled Diagram.png">
+			<img src="images/ERD Diagram.png">
 		</ul>
 	</body>
 </html>
