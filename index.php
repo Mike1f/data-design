@@ -15,7 +15,6 @@
 		<div>
 			<h2>User Story</h2>
 			<p>John wants to view different tags of computer security articles on Naked Security.</p>
-			<img src="./images/capture.PNG">
 		</div>
 		<h2>Use Case/Interaction Flow</h2>
 		<p>Precondition:</p>
@@ -35,25 +34,19 @@
 			<li>Category</li>
 			<ul>
 				<li>categoryId (primary key)</li>
-				<li>categoryName (foreign key)</li>
-			</ul>
-			<li>Tag</li>
-			<ul>
-				<li>tagId (primary key)</li>
-				<li>tagName (foreign key)</li>
+				<li>categoryName</li>
 			</ul>
 			<li>Article</li>
 			<ul>
 				<li>articleId (primary key)</li>
-				<li>articleName (foreign key)</li>
+				<li>articleCategoryId (foreign key)</li>
+				<li>articleName </li>
 				<li>articleAuthor</li>
 				<li>articleContent</li>
 				<li>articleDateTime</li>
-				<li>articleCategoryId</li>
-				<li>articleTagId</li>
 			</ul>
 		</ul>
 		<h1>ERD</h1>
-		<img src="images/erddiagram.png">
+		<img src="images/diagram.png">
 	</body>
 </html>
