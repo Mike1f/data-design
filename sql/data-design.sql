@@ -11,11 +11,11 @@ PRIMARY KEY(categoryId)
 
 CREATE TABLE article (
 articleId BINARY (16) NOT NULL,
-articleName BINARY (16) NOT NULL,
-articleDateTime BINARY (16) NOT NULL,
+articleCategoryId BINARY (16) NOT NULL,
 articleAuthor BINARY (16) NOT NULL,
 articleContent VARCHAR (240) NOT NULL,
-articleCategoryId BINARY (16) NOT NULL,
+articleDateTime BINARY (16) NOT NULL,
+articleName BINARY (16) NOT NULL,
 INDEX(articleCategoryId),
 FOREIGN KEY(articleCategoryId) REFERENCES (categoryId),
 PRIMARY KEY(articleId)
