@@ -1,4 +1,4 @@
-ALTER DATABASE data_design_CHANGE_ME CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER DATABASE mfigueroa14 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 DROP TABLE IF EXISTS category;
 DROP TABLE IF EXISTS article;
@@ -17,7 +17,7 @@ articleContent VARCHAR (240) NOT NULL,
 articleDateTime BINARY (16) NOT NULL,
 articleName BINARY (16) NOT NULL,
 INDEX(articleCategoryId),
-FOREIGN KEY(articleCategoryId) REFERENCES (categoryId),
-PRIMARY KEY(articleId)
+PRIMARY KEY(articleId),
+FOREIGN KEY (articleCategoryId) REFERENCES category(categoryId)
 );
 
