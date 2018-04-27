@@ -5,19 +5,19 @@ DROP TABLE IF EXISTS category;
 
 CREATE TABLE category (
 categoryId BINARY (16) NOT NULL,
-categoryName VARCHAR (64) NOT NULL,
+categoryName VARCHAR (16) NOT NULL,
 PRIMARY KEY(categoryId)
 );
 
 CREATE TABLE article (
 articleId BINARY (16) NOT NULL,
 articleCategoryId BINARY (16) NOT NULL,
-articleAuthor BINARY (16) NOT NULL,
+articleAuthor VARCHAR (16) NOT NULL,
 articleContent VARCHAR (240) NOT NULL,
-articleDate BINARY (16) NOT NULL,
+articleDate DATE NOT NULL,
 articleName VARCHAR (64) NOT NULL,
 INDEX(articleCategoryId),
-PRIMARY KEY(articleId),
-FOREIGN KEY (articleCategoryId) REFERENCES category(categoryId)
+FOREIGN KEY (articleCategoryId) REFERENCES category(categoryId),
+PRIMARY KEY(articleId)
 );
 
