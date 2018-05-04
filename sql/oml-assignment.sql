@@ -7,4 +7,4 @@ UPDATE article SET articleContent = "FarCry 5 is a fantastic game!", articleName
 
 UPDATE category SET categoryName = "Video Games";
 
--- DELETE FROM article
+DELETE FROM article

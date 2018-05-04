@@ -196,13 +196,6 @@ class Article implements \JsonSerializable {
 		$this->articleDate = $newArticleDate;
 	}
 	/**
-	 * inserts this article into mySQL
-	 *
-	 * @param \PDO $pdo PDO connection object
-	 * @throws \PDOException when mySQL related errors occur
-	 * @throws \TypeError if $pdo is not a PDO connection object
-	 **/
-	/**
 	 * accessor method for article name
 	 *
 	 * @return Uuid value of article name
@@ -228,13 +221,20 @@ class Article implements \JsonSerializable {
 		$this->articleName = $uuid;
 	}
 
+	/**
+	 * inserts this article into mySQL
+	 *
+	 * @param \PDO $pdo PDO connection object
+	 * @throws \PDOException when mySQL related errors occur
+	 * @throws \TypeError if $pdo is not a PDO connection object
+	 **/
 	public function insert(\PDO $pdo) : void {
 		// create query template
 		$query = "INSERT INTO article(articleId, articleCategoryId, articleAuthor, articleContent, articleDate, articleName) VALUES(:articleId, :articleCategoryId, :articleAuthor, :articleContent, :articleDate,:articleName)";
 		$statement = $pdo->prepare($query);
 		// bind the member variables to the place holders in the template
 		$formattedDate = $this->articleDate->format("Y-m-d H:i:s.u");
-		$parameters = ["articleId" => $this->articleId->getBytes(), "articleCategoryId" => $this->articleCategoryId->getBytes(), "articleAuthor" => $this->articleAuthor "articleContent" => $this->articleContent, "articleDate" => $formattedDate];
+		$parameters = ["articleId" => $this->articleId->getBytes(), "articleCategoryId" => $this->articleCategoryId->getBytes(), "articleAuthor" => $this->articleAuthor->getBytes(), "articleContent" => $this->articleContent->getBytes(), "articleDate" => $formattedDate];
 		$statement->execute($parameters);
 	}
 	/**
